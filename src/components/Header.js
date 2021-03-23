@@ -10,10 +10,8 @@ const Header = props => (
       <div className="inner">
         <h1>RunVision</h1>
         <p>
-          A fully responsive site template designed by HTML UP and released
-          <br />
-          for free under the{' '}
-          <a href="https://html5up.net/license">Creative Commons</a> license.
+        Our Website is currently under improvement works as a result of so many people getting out and running.<br/>
+        We want to bring you a service that meets the needs for your 2021 PB's and newfound adventures. 
         </p>
       </div>
     </div>

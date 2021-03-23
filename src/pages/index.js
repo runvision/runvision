@@ -1,6 +1,6 @@
 import React from 'react'
 import Layout from '../components/layout'
-
+import video from '../images/video.mp4'
 import Header from '../components/Header'
 import Main from '../components/Main'
 import Footer from '../components/Footer'
@@ -104,6 +104,12 @@ class IndexPage extends React.Component {
               setWrapperRef={this.setWrapperRef}
             />
             <Footer timeout={this.state.timeout} />
+          </div>
+          <div id="video-bg">
+            <video autoPlay muted loop>
+              <source src={video} type="video/mp4"/>
+              Your browser does not support the video tag.
+            </video>
           </div>
           <div id="bg"></div>
         </div>

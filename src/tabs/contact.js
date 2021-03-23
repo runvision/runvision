@@ -114,17 +114,17 @@ export const ContactPage = ({ close, ...props } ) => {
         <input name="_gotcha" style={{ display: "none" }} type="text" />
         <input type="hidden" name="_subject" value="(Auto RV)" />
         <div className="field half first">
-          <label htmlFor="name">Name</label>
+          <label htmlFor="name">Your Name</label>
           <input type="text" name="name" onKeyPress={onKeyPress} />
           <InputErrors errors={errors["name"]} />
         </div>
         <div className="field half">
-          <label htmlFor="email">Email</label>
+          <label htmlFor="email">Your Email</label>
           <input type="text" name="email" onKeyPress={onKeyPress} />
           <InputErrors errors={errors["email"]} />
         </div>
         <div className="field">
-          <label htmlFor="message">Message</label>
+          <label htmlFor="message">How can we help?</label>
           <textarea name="message" id="message" rows="4" onKeyPress={onKeyPress}></textarea>
           <InputErrors errors={errors["message"]} />
         </div>
