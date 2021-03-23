@@ -140,7 +140,7 @@ export const ContactPage = ({ close, ...props } ) => {
         <div style={{marginBottom: "30px"}}>Thank you for your message.</div>
       )}
       <ul className="icons">
-        <li>
+        {/* <li>
           <a
             href="https://twitter.com/ttt"
             className="icon fa-twitter"
@@ -152,9 +152,9 @@ export const ContactPage = ({ close, ...props } ) => {
           <a href="https://codebushi.com" className="icon fa-facebook">
             <span className="label">Facebook</span>
           </a>
-        </li>
+        </li> */}
         <li>
-          <a href="https://codebushi.com" className="icon fa-instagram">
+          <a href="https://www.instagram.com/runvision19" className="icon fa-instagram">
             <span className="label">Instagram</span>
           </a>
         </li>

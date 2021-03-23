@@ -108,10 +108,11 @@ class IndexPage extends React.Component {
           <div id="video-bg">
             <video autoPlay muted loop>
               <source src={video} type="video/mp4"/>
+              <div id="bg"></div>
               Your browser does not support the video tag.
             </video>
           </div>
-          <div id="bg"></div>
+          {/* <div id="bg"></div> */}
         </div>
       </Layout>
     )
