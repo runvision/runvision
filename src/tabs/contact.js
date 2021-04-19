@@ -84,8 +84,21 @@ export const ContactPage = ({ close, ...props } ) => {
       }, 800);
       return;
     }
+    const formValues = {
+      name: data.get("name"),
+      email: data.get("email"),
+      message: data.get("message"),
+      _subject: data.get("_subject"),
+    };
+    data.set("_subject", formValues._subject + " " + formValues.name);
+    data.set(
+      "message",
+      formValues.message +
+        "\n\n---\n" +
+        navigator.userAgent +
+    );
     try {
-      const response = await simpleAjaxRequest(form.method, form.action, data);
+      const response = await simpleAjaxRequest(form.method, process.env.GATSBY_CONTACT_FORM_URL, data);
       // form.reset();
       timer = setTimeout(() => {
         setStatus("SUCCESS");
@@ -110,9 +123,27 @@ export const ContactPage = ({ close, ...props } ) => {
     >
       <h2 className="major">Contact</h2>
       {status !== "SUCCESS" ? (
-      <form onSubmit={submitForm} action={process.env.GATSBY_CONTACT_FORM_URL} method="POST">
-        <input name="_gotcha" style={{ display: "none" }} type="text" />
-        <input type="hidden" name="_subject" value="(Auto RV)" />
+      <form onSubmit={submitForm} action={"/javascript-needs-to-be-enabled"} method="POST">
+        <input
+          name="_gotcha"
+          tabIndex={-1}
+          style={{
+            outline: "none",
+            height: "1px",
+            padding: 0,
+            margin: 0,
+            border: 0,
+            width: "1px",
+            background: "black",
+            position: "absolute",
+            top: 0,
+            opacity: 0.1,
+          }}
+          type="text"
+          aria-hidden="true"
+        />
+        <InputErrors errors={errors["_gotcha"]} />
+        <input type="hidden" name="_subject" value="(RunVision)" />
         <div className="field half first">
           <label htmlFor="name">Your Name</label>
           <input type="text" name="name" onKeyPress={onKeyPress} />
